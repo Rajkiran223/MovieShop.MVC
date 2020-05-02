@@ -1,4 +1,5 @@
-﻿using MovieShop.Entities;
+﻿using MovieShop.Data;
+using MovieShop.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,18 +9,20 @@ using static MovieShop.Data.GenreRepository;
 
 namespace MovieShop.Services
 {
-    public class GenreService
+    public class GenreService : IGenreService
     {
-        private readonly IGenreRepository _genreRepository;
-        public GenreService(IGenreRepository genreRepository)
+        private GenreRepository _genreRepository;
+
+        public GenreService()
         {
-            _genreRepository = genreRepository;
+            _genreRepository = new GenreRepository(new MovieShopDbContext());
         }
 
-        public IEnumerable<Genre> GetAllGenres()
+        public IEnumerable<Genre> GetAllGenre()
         {
             return _genreRepository.GetAll();
         }
+
     }
 
     public interface IGenreService
