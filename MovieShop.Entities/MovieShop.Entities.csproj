@@ -53,6 +53,7 @@
     <Compile Include="MovieCast.cs" />
     <Compile Include="MovieCrew.cs" />
     <Compile Include="Purchase.cs" />
+    <Compile Include="Review.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Trailer.cs" />
     <Compile Include="Crew.cs" />

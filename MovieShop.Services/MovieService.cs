@@ -23,7 +23,7 @@ namespace MovieShop.Services
 
         public IEnumerable<Movie> GetMoviesByGenre(int genreId)
         {
-            throw new NotImplementedException();
+            return _movieRepository.GetMoviesByGenre(genreId);
         }
 
         public IEnumerable<Movie> GetTopGrossingMovies()

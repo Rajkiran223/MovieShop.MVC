@@ -63,5 +63,6 @@ namespace MovieShop.Entities
        public virtual ICollection<MovieCast> MovieCasts { get; set; }       
 
         public ICollection<MovieCrew> MovieCrews { get; set; }
+        public int Rating { get; set; }
     }
 }

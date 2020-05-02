@@ -22,6 +22,7 @@ namespace MovieShop.Data
         public virtual DbSet<MovieCast> MovieCasts { get; set; }
 
         public DbSet<Role> Roles { get; set; }
+        public IEnumerable<object> Review { get; internal set; }
 
         //Write Fluent API
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
