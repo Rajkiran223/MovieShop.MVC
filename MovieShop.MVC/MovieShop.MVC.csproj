@@ -128,9 +128,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CastController.cs" />
     <Compile Include="Controllers\GenresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Filters\LogActionFilter.cs" />
+    <Compile Include="Filters\MovieShopExceptionFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -279,6 +282,8 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shared\GenreView.cshtml" />
     <Content Include="Views\Shared\_MovieCard.cshtml" />
+    <Content Include="Views\Cast\oldCreate.cshtml" />
+    <Content Include="Views\Cast\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -11,7 +11,7 @@ namespace MovieShop.Data
 
     public class MovieRepository : Repository<Movie>, IMovieRepository
     {
-        private readonly MovieShopDbContext movieShopDbContext;
+       // private readonly MovieShopDbContext movieShopDbContext;
 
         public MovieRepository(MovieShopDbContext context) : base(context)
         {
