@@ -10,10 +10,11 @@ namespace MovieShop.Services
 {
     public class MovieService : IMovieService
     {
-        private MovieRepository _movieRepository;
-        public MovieService()
+        private readonly MovieRepository _movieRepository;
+        public MovieService(IMovieRepository movieRepository)
         {
-            _movieRepository = new MovieRepository(new MovieShopDbContext());
+            _movieRepository = movieRepository;
+           // _movieRepository = new MovieRepository(new MovieShopDbContext());
         }
         public Movie GetMovieDetails(int id)
         {

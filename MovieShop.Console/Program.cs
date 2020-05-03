@@ -22,13 +22,13 @@ namespace MovieShopConsole
 
                 //var movie = movieService.GetMovieDetails(1);
 
-            var castservice = new CastService();
-            var cast = castservice.GetCastDetails(1);
+            //var castservice = new CastService();
+            //var cast = castservice.GetCastDetails(1);
 
-            //Console.WriteLine(movie.Id + movie.Title);
-            Console.WriteLine(cast.Id);
+            ////Console.WriteLine(movie.Id + movie.Title);
+            //Console.WriteLine(cast.Id);
 
-                Console.ReadLine();
+            //    Console.ReadLine();
                  
             
             

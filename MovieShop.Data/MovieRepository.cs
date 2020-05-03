@@ -34,16 +34,13 @@ namespace MovieShop.Data
         public override Movie GetById(int id)
         {
             // Get Movie by Id and also include Average Rating of that Movie.
-            var movie = _context.Movies.Include(m => m.MovieCasts.Select(c => c.Cast)).Include(m => m.Genres)
-                                .FirstOrDefault(m => m.Id == id);
-            if (movie == null) return null;
-            var movieRating = _context.Review.Where(r => r.MovieId == id).Average(r => r.Rating);
-            if (movieRating > 0) movie.Rating = Math.Ceiling(movieRating * 100) / 100;
+            var movie = _context.Movies.FirstOrDefault(m => m.Id == id);
+            
             //Get average rating also later
             return movie;
         }
     }
-
+      
     public interface IMovieRepository : IRepository<Movie>
     {
         IEnumerable<Movie> GetTopGrossingMovies();

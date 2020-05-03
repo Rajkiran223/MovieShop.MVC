@@ -11,7 +11,7 @@ namespace MovieShop.Services
 {
     public class GenreService : IGenreService
     {
-        private GenreRepository _genreRepository;
+        private readonly GenreRepository _genreRepository;
 
         public GenreService()
         {

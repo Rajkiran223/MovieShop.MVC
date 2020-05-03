@@ -11,10 +11,10 @@ namespace MovieShop.MVC.Controllers
     [HandleError]
     public class HomeController : Controller
     {
-        public IMovieService _movieService;
-        public HomeController()
+        public readonly IMovieService _movieService;
+        public HomeController(IMovieService movieService)
         {
-            _movieService = new MovieService();
+            _movieService = movieService;
         }
 
         //[LogActionFilter ]

@@ -44,6 +44,7 @@
     <Compile Include="CastService.cs" />
     <Compile Include="GenreService.cs" />
     <Compile Include="MovieService.cs" />
+    <Compile Include="MovieTestService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
